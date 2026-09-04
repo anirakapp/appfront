@@ -3,7 +3,6 @@
 import { useEffect, useState, type ReactElement } from "react";
 import BusinessCard from "./BusinessCard";
 import { getNegocios } from "../lib/api";
-import { MOCK_NEGOCIOS } from "../lib/mockNegocios";
 import type { Negocio } from "../lib/types";
 
 interface BusinessesSectionProps {
