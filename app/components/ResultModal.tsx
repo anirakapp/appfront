@@ -2,7 +2,7 @@
 
 import { useRef, useState, type ReactElement } from "react";
 import type { CalculoResponse } from "../lib/types";
-
+import "../styles/modalresult.css";
 interface ResultModalProps {
   resultado: CalculoResponse;
   onClose: () => void;
