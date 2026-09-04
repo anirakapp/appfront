@@ -30,7 +30,6 @@ export default function BusinessesSection({
       } catch {
         // Backend todavía no disponible: se usa el fallback local de desarrollo.
         if (!cancelled) {
-          setNegocios(MOCK_NEGOCIOS);
           setUsingFallback(true);
         }
       } finally {
