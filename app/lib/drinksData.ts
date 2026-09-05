@@ -12,5 +12,4 @@ export const DRINK_OPTIONS: DrinkOption[] = [
 
 export const DRINK_VISIBLE_COUNT = 4;
 
-/** Preselección por defecto, igual al diseño (Gaseosa + Agua tildadas). */
 export const DEFAULT_DRINKS: string[] = ["gaseosa", "agua"];
