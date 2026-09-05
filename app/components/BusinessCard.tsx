@@ -1,7 +1,6 @@
 import type { ReactElement } from "react";
 import Image from "next/image";
 import type { Negocio } from "../lib/types";
-
 interface BusinessCardProps {
   negocio: Negocio;
 }
