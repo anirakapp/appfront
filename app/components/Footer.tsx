@@ -15,7 +15,6 @@ export default function Footer(): ReactElement {
         />
         <span>¿Cuánto Compro?</span>
       </div>
-
       <nav className="cc-footer__links" aria-label="Enlaces del sitio">
         <a href="#como-funciona">Cómo funciona</a>
         <a href="#privacidad">Privacidad</a>
