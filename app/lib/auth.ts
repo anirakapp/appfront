@@ -1,6 +1,4 @@
 // lib/auth.ts
-// Manejo de sesión en el cliente. Simple a propósito: guardamos el JWT y
-// el usuario que devuelve el backend en localStorage. Solo se usa desde
 // componentes "use client".
 import type { AuthUser } from "./types";
 
