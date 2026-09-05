@@ -3,7 +3,6 @@ import type { ReactElement } from "react";
 interface HeaderProps {
   ciudad: string;
 }
-
 export default function Header({ ciudad }: HeaderProps): ReactElement {
   return (
     <header className="cc-header">
