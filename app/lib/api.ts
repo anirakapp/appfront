@@ -56,11 +56,18 @@ export async function postCalculo(payload: CalculoRequest): Promise<CalculoRespo
  * GET /api/negocios?ciudad=Rosario
  * Lista de negocios auspiciados/cercanos que arma el backend.
  */
-export async function getNegocios(ciudad: string): Promise<Negocio[]> {
-  const res = await fetch(
-    `${API_URL}/api/negocios?ciudad=${encodeURIComponent(ciudad)}`,
-    { cache: "no-store" }
-  );
+export async function getNegocios(
+  ciudad: string,
+  lat?: number,
+  lng?: number
+): Promise<Negocio[]> {
+  const params = new URLSearchParams({ ciudad });
+  if (lat != null) params.set("lat", String(lat));
+  if (lng != null) params.set("lng", String(lng));
+
+  const res = await fetch(`${API_URL}/api/negocios?${params.toString()}`, {
+    cache: "no-store",
+  });
   return parseJsonOrThrow<Negocio[]>(res);
 }
 
