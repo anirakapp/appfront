@@ -1,6 +1,4 @@
 // lib/menuData.ts
-// Catálogo de menús. Agregar un nuevo plato = agregar un objeto acá
-// (y su imagen en public/assets/menu/<id>.jpg). No requiere tocar componentes.
 import type { MenuOption } from "./types";
 
 export const MENU_OPTIONS: MenuOption[] = [
