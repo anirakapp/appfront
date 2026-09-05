@@ -19,25 +19,34 @@ export default function BusinessesSection({
   useEffect(() => {
     let cancelled = false;
 
-    async function load(): Promise<void> {
-      setLoading(true);
-      try {
-        const data = await getNegocios(ciudad);
-        if (!cancelled) {
-          setNegocios(data);
-          setUsingFallback(false);
-        }
-      } catch {
-        // Backend todavía no disponible: se usa el fallback local de desarrollo.
-        if (!cancelled) {
-          setUsingFallback(true);
-        }
-      } finally {
-        if (!cancelled) setLoading(false);
-      }
+    function cargar(lat?: number, lng?: number): void {
+      getNegocios(ciudad, lat, lng)
+        .then((data) => {
+          if (!cancelled) {
+            setNegocios(data);
+            setUsingFallback(false);
+          }
+        })
+        .catch(() => {
+          if (!cancelled) setUsingFallback(true);
+        })
+        .finally(() => {
+          if (!cancelled) setLoading(false);
+        });
     }
 
-    void load();
+    setLoading(true);
+
+    if (typeof navigator !== "undefined" && navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (pos) => cargar(pos.coords.latitude, pos.coords.longitude),
+        () => cargar(), // sin permiso de ubicación: seguimos sin distancia real
+        { timeout: 5000 }
+      );
+    } else {
+      cargar();
+    }
+
     return () => {
       cancelled = true;
     };
