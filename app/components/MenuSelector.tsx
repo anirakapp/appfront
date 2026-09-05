@@ -4,7 +4,6 @@ import Swal from "sweetalert2";
 import OptionGrid from "./OptionGrid";
 import { MENU_OPTIONS, MENU_VISIBLE_COUNT } from "../lib/menuData";
 import "../styles/food.css";
-
 interface MenuSelectorProps {
   selected: string[];
   onChange: (next: string[]) => void;
