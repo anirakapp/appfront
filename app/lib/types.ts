@@ -1,6 +1,4 @@
 // lib/types.ts
-// Tipos compartidos entre componentes y la capa de acceso al backend.
-// Mantener este archivo como fuente única de verdad del "contrato" con el backend.
 
 export interface MenuOption {
   id: string;
