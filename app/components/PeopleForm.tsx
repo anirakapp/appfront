@@ -9,7 +9,6 @@ interface PeopleFormProps {
 
 const MIN_PERSONAS = 1;
 const MAX_PERSONAS = 500;
-
 export default function PeopleForm({
   adultos,
   ninos,
