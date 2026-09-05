@@ -9,6 +9,7 @@ interface BusinessesSectionProps {
   ciudad: string;
 }
 
+
 export default function BusinessesSection({
   ciudad,
 }: BusinessesSectionProps): ReactElement {
