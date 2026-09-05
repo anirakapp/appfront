@@ -12,7 +12,6 @@ export default function Hero(): ReactElement {
         </h1>
         <p>Te ayudamos a saber cuánto comprar y dónde conseguirlo cerca tuyo.</p>
       </div>
-
       <div className="cc-hero__image" aria-hidden="true">
         <Image
           src="/assets/hero/reunion.jpg"
