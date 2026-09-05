@@ -15,7 +15,6 @@ import ResultModal from "./ResultModal";
 import { postCalculo, isApiError } from "../lib/api";
 import { DEFAULT_DRINKS } from "../lib/drinksData";
 import type { CalculoResponse } from "../lib/types";
-
 interface HomeViewProps {
   ciudad: string;
 }
