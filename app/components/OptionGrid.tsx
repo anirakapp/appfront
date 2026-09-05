@@ -7,7 +7,6 @@ export interface GridOption {
   label: string;
   image: string;
 }
-
 interface OptionGridProps {
   options: GridOption[];
   visibleCount: number;
