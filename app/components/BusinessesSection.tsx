@@ -39,11 +39,11 @@ export default function BusinessesSection({
     setLoading(true);
 
     if (typeof navigator !== "undefined" && navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (pos) => cargar(pos.coords.latitude, pos.coords.longitude),
-        () => cargar(), // sin permiso de ubicación: seguimos sin distancia real
-        { timeout: 5000 }
-      );
+     navigator.geolocation.getCurrentPosition(
+  (pos) => cargar(pos.coords.latitude, pos.coords.longitude),
+  () => cargar(),
+  { timeout: 15000, maximumAge: 60000, enableHighAccuracy: false }
+);
     } else {
       cargar();
     }
